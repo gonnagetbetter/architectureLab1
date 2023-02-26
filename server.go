@@ -4,17 +4,16 @@ import (
 	"encoding/json"
 	"net/http"
 	"time"
-  )
+)
   
-  type TimeResponse struct {
+type TimeResponse struct {
 	CurrentTime string `json:"current_time"`
   }
 
-  func main() {
+func main() {
 	http.HandleFunc("/time", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodGet {
-		  http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
-		  return
-		}
-
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
 }
