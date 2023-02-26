@@ -17,5 +17,5 @@ func main() {
 		return
 	}
 	
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {})
+	http.HandleFunc("/", func() {})
 }
