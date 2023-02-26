@@ -17,7 +17,7 @@ func main() {
 			return
 		}
     
-    http.HandleFunc("/", func() {})
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {})
 
 		currentTime := time.Now().Format(time.RFC3339)
 		response := TimeResponse{currentTime}
