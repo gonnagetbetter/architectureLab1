@@ -18,7 +18,6 @@ func main() {
 		}
     
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-			http.Error(w, "Not found", http.StatusNotFound)
 		})
 
 		currentTime := time.Now().Format(time.RFC3339)
