@@ -16,8 +16,8 @@ func main() {
 			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 			return
 		}
-    
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {})
+
+		http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {})
 
 		currentTime := time.Now().Format(time.RFC3339)
 		response := TimeResponse{currentTime}
