@@ -16,6 +16,8 @@ func main() {
 			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 			return
 		}
+    
+    http.HandleFunc("/", func() {})
 
 		currentTime := time.Now().Format(time.RFC3339)
 		response := TimeResponse{currentTime}
@@ -29,5 +31,4 @@ func main() {
 		w.Header().Set("Content-Type", "application/json")
 		w.Write(jsonBytes)
 	})
-
 }
