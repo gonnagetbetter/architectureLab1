@@ -7,7 +7,7 @@ import (
 )
 
 type TimeResponse struct {
-  CurrentTime string `json:"current_time"`
+  CurrentTime string `json:"time"`
 }
 
 func main() {
@@ -34,7 +34,7 @@ func main() {
     http.Error(w, "Not found", http.StatusNotFound)
   })
 
-  err := http.ListenAndServe(":8080", nil)
+  err := http.ListenAndServe(":8795", nil)
   if err != nil {
     panic(err)
   }
